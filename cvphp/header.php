@@ -33,27 +33,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="index.php"
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=hello"
                                alt="presentation">Hello</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="#competence"
-                               alt="Mes compétences">Compétences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="#portfolio"
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=portfolio"
                                alt="Mes projets">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="#loisirs"
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=loisir"
                                alt="Mes loisirs">Loisirs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="#parcours"
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=parcours"
                                alt="Mon parcours professionnel et scolaire">Parcours</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="contact.php"
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=contact"
                                alt="Me contacter">Contact</a>
                         </li>
                     </ul>
