@@ -377,16 +377,16 @@ include 'header.php';
         <div class="container text-center">
             <h1 class="p-3" data-aos="fade-up">CONTACT</h1>
 
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col col-lg-6 mx-auto" data-aos="fade-up">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45200.03920071139!2d4.881364696834596!3d44.923285699050595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f55799c63221c7%3A0x408ab2ae4bfb580!2s26000%20Valence!5e0!3m2!1sfr!2sfr!4v1608471067770!5m2!1sfr!2sfr"
-                        width="400" height="300" style="border:0;" allowfullscreen="" aria-hidden="false"
+                        width="auto" height="200" style="border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
                 </div>
 
                 <div class="col col-lg-6">
-                    <form action="https://httpbin.org/post" method="POST">
+                   <!-- <form action="https://httpbin.org/post" method="POST">
 
                         <div class="mb-3 row  mx-auto" data-aos="fade-up">
                             <label for="e-mail" class="form-label">Adresse e-mail</label>
@@ -438,7 +438,8 @@ include 'header.php';
                             <input type="submit" value="Envoyer mail"
                                    class="btn btn-lg btn-outline-dark mx-auto my-2">
                         </div>
-                    </form>
+                    </form> -->
+                    <a href="/index.php?page=contact" class="btn btn-lg btn-outline-dark mx-auto my-auto">CONTACT</a>
 
                 </div>
             </div>

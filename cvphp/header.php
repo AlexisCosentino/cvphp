@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['dateFirstVisit'])) {
+    $_SESSION['dateFirstVisit'] = "Première visite le " . date('Y-m-d') . " à " . date('H-i-s');;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -33,24 +42,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=hello"
-                               alt="presentation">Hello</a>
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=hello">Hello</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=portfolio"
-                               alt="Mes projets">Portfolio</a>
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=loisir"
-                               alt="Mes loisirs">Loisirs</a>
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=loisir">Loisirs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=parcours"
-                               alt="Mon parcours professionnel et scolaire">Parcours</a>
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=parcours">Parcours</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=contact"
-                               alt="Me contacter">Contact</a>
+                            <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark" href="/index.php?page=contact">Contact</a>
                         </li>
                     </ul>
                 </div>

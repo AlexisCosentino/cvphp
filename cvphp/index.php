@@ -3,8 +3,7 @@
 
 
 if (isset($_GET['page'])) {
-    $page = htmlspecialchars($_GET['page']);
-    echo $page;                                         // Faire le test de la fonction htmlspecialchar
+    $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);
 
     if ($page === 'hello') {
         require 'pages/hello.php';
@@ -36,5 +35,8 @@ else {
     require 'pages/hello.php';
 }
 
-?>
+date_default_timezone_set('Europe/Paris');
+
+
+
 
