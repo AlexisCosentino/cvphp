@@ -1,7 +1,9 @@
 
 <?php
 
-$route = ['test', 'test', 'test'];
+$route = array(
+
+);
 
 
 
@@ -21,12 +23,7 @@ if (isset($_GET['page'])) {
         require 'pages/parcours.php';
 
     } else if ($page === 'contact') {
-        $metaTitle = 'Contact';
-        $metaDescription = 'Si mon profil vous intéresse ou que vous souhaitiez en savoir plus sur mes compétences, vous pouvez
-        me contacter par email via le formulaire ci-dessous.';
-        require 'header.php';
         require 'pages/contact.php';
-        require 'footer.php';
 
     } else {
         require 'pages/error.php';

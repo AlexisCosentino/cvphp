@@ -1,4 +1,10 @@
 <?php
+$metaTitle = 'Contact';
+$metaDescription = 'Si mon profil vous intéresse ou que vous souhaitiez en savoir plus sur mes compétences, vous pouvez
+        me contacter par email via le formulaire ci-dessous.';
+require 'header.php';
+
+
 /*
 echo $_POST['email'];
 echo $_POST['sexe'];
@@ -7,6 +13,7 @@ echo $_POST['firstname'];
 echo $_POST['telephone'];
 echo $_POST['demande'];
 echo $_POST['texte']; */
+
 
 
 date_default_timezone_set('Europe/Paris');           //Créer la date
@@ -218,5 +225,6 @@ var_dump($formErrors);
 
 <?php
 
+require 'footer.php';
 
 ?>
