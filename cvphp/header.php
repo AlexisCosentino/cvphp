@@ -2,8 +2,15 @@
 
 session_start();
 if (!isset($_SESSION['dateFirstVisit'])) {
-    $_SESSION['dateFirstVisit'] = "Première visite le " . date('Y-m-d') . " à " . date('H-i-s');;
+    $_SESSION['dateFirstVisit'] = "Première visite le " . date('Y-m-d') . " à " . date('H') . ":" . date('i-s');
 }
+
+if (!isset($_SESSION['countViewPage'])) {
+    $_SESSION['countViewPage'] = 1;
+} else {
+    $_SESSION['countViewPage']++;
+}
+
 
 ?>
 

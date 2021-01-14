@@ -1,6 +1,9 @@
 
 <?php
 
+$route = ['test', 'test', 'test'];
+
+
 
 if (isset($_GET['page'])) {
     $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);

@@ -13,14 +13,7 @@ include 'header.php';
         </div>
 
     </div>
-        <!-- <div class="container p-5" style="background: url(error404.jpg);">
-            <div class="row">
-                <div class="col my-auto">
-                    <h1 class="text-center">ERROR 404</h1>
-                </div>
-            </div>
 
-        </div> -->
 </main>
 
 <?php

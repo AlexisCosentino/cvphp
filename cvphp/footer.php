@@ -2,13 +2,13 @@
 
 
 
-<footer class="container-fluid bg-black text-light p-5">
+<footer class="container-fluid bg-black text-light p-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto my-auto">
                 <p>Copyrights - Tous droits réservé - Alexis Cosentino</p>
                 <p><em>Dernière mise à jour le 12/01/2021</em></p>
-                <?php echo $_SESSION['dateFirstVisit'] ?>
+                <p><em><?php echo $_SESSION['dateFirstVisit'] . "  &  Vous avez vu " . $_SESSION['countViewPage'] . " pages."?></em></p>
             </div>
             <div class="col-lg-4 mx-auto my-auto">
                 <a href="https://www.facebook.com/alexis.cosentino.5/" class="pr-4" target="_blank"><img

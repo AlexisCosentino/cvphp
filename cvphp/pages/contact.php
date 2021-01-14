@@ -37,46 +37,46 @@ $data = [
 ];
 
 $formulaireok = true;
-$error = [];                                                                        //Tableau d'erreur qui se rempli en fonction des conditions
+$formErrors = [];                                                                        //Tableau d'erreur qui se rempli en fonction des conditions
 
 if (isset($submit)) {
     if (empty($email)) {
-        $error['email'] = "Vous n'avez pas renseigné votre email";
+        $formErrors['email'] = "Vous n'avez pas renseigné votre email";
         $formulaireok = false;
     }
 
     if (empty($emailvalid)) {
-        $error['emailvalide'] = "Merci de rentrer une adresse email valide";
+        $formErrors['emailvalide'] = "Merci de rentrer une adresse email valide";
         $formulaireok = false;
     }
 
     if (empty($nom)) {
-        $error['name'] = "Vous n'avez pas renseigné votre nom";
+        $formErrors['name'] = "Vous n'avez pas renseigné votre nom";
         $formulaireok = false;
     }
     if (empty($prenom)) {
-        $error['firstname'] = "Vous n'avez pas renseigné votre prénom";
+        $formErrors['firstname'] = "Vous n'avez pas renseigné votre prénom";
         $formulaireok = false;
     }
     if (empty($telephone)) {
-        $error['telephone'] = "Vous n'avez pas renseigné votre numéro de telephone";
+        $formErrors['telephone'] = "Vous n'avez pas renseigné votre numéro de telephone";
         $formulaireok = false;
     }
     if (empty($demande)) {
-        $error['demande'] = "Vous n'avez pas renseigné votre demande";
+        $formErrors['demande'] = "Vous n'avez pas renseigné votre demande";
         $formulaireok = false;
     }
     if (empty($message)) {
-        $error['texte'] = "Vous n'avez pas renseigné votre message";
+        $formErrors['texte'] = "Vous n'avez pas renseigné votre message";
         $formulaireok = false;
     } else if (strlen($message) < 5) {
-        $error['textelength'] = "Le message doit contenir un minimum de 5 caractères";
+        $formErrors['textelength'] = "Le message doit contenir un minimum de 5 caractères";
         $formulaireok = false;
     }
     if ($formulaireok) {
         file_put_contents($filename, $data, FILE_APPEND);       // Si tout est bien rempli, le formulaire s'envoit
     }
-
+var_dump($formErrors);
 }
 
 
@@ -103,10 +103,10 @@ if (isset($submit)) {
                         <div class="mb-3 row  mx-auto" data-aos="fade-up">
 
                             <div class="text-danger"> <?php
-                                if (isset($error['email'])) {
-                                    echo $error['email'];
-                                } else if (isset($error['emailvalide'])) {
-                                    echo $error['emailvalide'];
+                                if (isset($formErrors['email'])) {
+                                    echo $formErrors['email'];
+                                } else if (isset($formErrors['emailvalide'])) {
+                                    echo $formErrors['emailvalide'];
                                 } ?> </div>
                             <br>
 
@@ -134,8 +134,8 @@ if (isset($submit)) {
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
 
                             <div class="text-danger"> <?php
-                                if (isset($error['name'])) {
-                                    echo $error['name'];
+                                if (isset($formErrors['name'])) {
+                                    echo $formErrors['name'];
                                 } ?> </div>
                             <br>
 
@@ -147,8 +147,8 @@ if (isset($submit)) {
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
 
                             <div class="text-danger"> <?php
-                                if (isset($error['firstname'])) {
-                                    echo $error['firstname'];
+                                if (isset($formErrors['firstname'])) {
+                                    echo $formErrors['firstname'];
                                 } ?> </div>
                             <br>
 
@@ -160,8 +160,8 @@ if (isset($submit)) {
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
 
                             <div class="text-danger"> <?php
-                                if (isset($error['telephone'])) {
-                                    echo $error['telephone'];
+                                if (isset($formErrors['telephone'])) {
+                                    echo $formErrors['telephone'];
                                 } ?> </div>
                             <br>
 
@@ -173,8 +173,8 @@ if (isset($submit)) {
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
 
                             <div class="text-danger"> <?php
-                                if (isset($error['demande'])) {
-                                    echo $error['demande'];
+                                if (isset($formErrors['demande'])) {
+                                    echo $formErrors['demande'];
                                 } ?> </div>
                             <br>
 
@@ -191,10 +191,10 @@ if (isset($submit)) {
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
 
                             <div class="text-danger"> <?php
-                                if (isset($error['texte'])) {
-                                    echo $error['texte'];
-                                } else if (isset($error['textelength'])) {
-                                    echo $error['textelength'];
+                                if (isset($formErrors['texte'])) {
+                                    echo $formErrors['texte'];
+                                } else if (isset($formErrors['textelength'])) {
+                                    echo $formErrors['textelength'];
                                 }
                                 ?> </div>
                             <br>
