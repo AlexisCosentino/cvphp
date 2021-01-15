@@ -2,6 +2,7 @@
 $metaTitle = 'ERROR 404';
 $metaDescription = 'La page demandé n\'existe pas, merci de vous rediriger.';
 include 'header.php';
+ob_start();
 ?>
     <main>
     <div class="container p-5">
@@ -17,11 +18,9 @@ include 'header.php';
 </main>
 
 <?php
-    include 'footer.php';
-    ?>
+include 'footer.php';
 
+$buffer = ob_get_contents();
+ob_get_clean();
 
-<!--
-style="display: flex; justify-content: center; padding: 100px;"
-//style="display: flex; justify-content: center; padding-bottom: 100px;"
--->
+?>
