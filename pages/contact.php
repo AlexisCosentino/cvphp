@@ -93,6 +93,7 @@ if (isset($myinputs['submit'])) {
         $formulaireok = false;
     }
     if ($formulaireok) {
+        $messageok = "Votre demande à bien été envoyé !";
         file_put_contents($filename, $data, FILE_APPEND);       // Si tout est bien rempli, le formulaire s'envoit
     }
 }
@@ -117,16 +118,13 @@ if (isset($myinputs['submit'])) {
                 <div class="col col-lg-6">
                     <form action="/index.php?page=contact" method="POST">
 
+                        <div class="text-danger"> <?php
+                            if (isset($formErrors['email'])) {
+                                echo $formErrors['email'];
+                            } else if (isset($formErrors['emailvalide'])) {
+                                echo $formErrors['emailvalide'];
+                            } ?> </div>
                         <div class="mb-3 row  mx-auto" data-aos="fade-up">
-
-                            <div class="text-danger"> <?php
-                                if (isset($formErrors['email'])) {
-                                    echo $formErrors['email'];
-                                } else if (isset($formErrors['emailvalide'])) {
-                                    echo $formErrors['emailvalide'];
-                                } ?> </div>
-                            <br>
-
                             <label for="e-mail" class="form-label">Adresse E-mail</label>
                             <input type="text" class="form-control" id="e-mail" name="email"
                                    placeholder="Saisir E-mail">
@@ -148,53 +146,43 @@ if (isset($myinputs['submit'])) {
                             </div>
                         </div>
 
+
+                        <div class="text-danger"> <?php
+                            if (isset($formErrors['name'])) {
+                                echo $formErrors['name'];
+                            } ?> </div>
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
-
-                            <div class="text-danger"> <?php
-                                if (isset($formErrors['name'])) {
-                                    echo $formErrors['name'];
-                                } ?> </div>
-                            <br>
-
                             <label for="nom" class="form-label">Nom</label>
                             <input type="text" name="name" class="form-control" id="nom"
                                    placeholder="Saisir votre Nom">
                         </div>
 
+                        <div class="text-danger"> <?php
+                            if (isset($formErrors['firstname'])) {
+                                echo $formErrors['firstname'];
+                            } ?> </div>
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
-
-                            <div class="text-danger"> <?php
-                                if (isset($formErrors['firstname'])) {
-                                    echo $formErrors['firstname'];
-                                } ?> </div>
-                            <br>
-
                             <label for="prenom" class="form-label">Prénom</label>
                             <input type="text" name="firstname" class="form-control" id="prenom"
-                                   placeholder="Saisir votrer Prénom">
+                                   placeholder="Saisir votre Prénom">
                         </div>
 
+                        <div class="text-danger"> <?php
+                            if (isset($formErrors['telephone'])) {
+                                echo $formErrors['telephone'];
+                            } ?> </div>
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
-
-                            <div class="text-danger"> <?php
-                                if (isset($formErrors['telephone'])) {
-                                    echo $formErrors['telephone'];
-                                } ?> </div>
-                            <br>
-
                             <label for="tel" class="form-label">Téléphone</label>
                             <input type="text" name="telephone" class="form-control" id="tel"
                                    placeholder="Saisir N° de Téléphone">
                         </div>
 
+
+                        <div class="text-danger"> <?php
+                            if (isset($formErrors['demande'])) {
+                                echo $formErrors['demande'];
+                            } ?> </div>
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
-
-                            <div class="text-danger"> <?php
-                                if (isset($formErrors['demande'])) {
-                                    echo $formErrors['demande'];
-                                } ?> </div>
-                            <br>
-
                             <label for="demande">Votre demande : </label>
 
                             <select name="demande" id="demande" class="form-control">
@@ -205,26 +193,29 @@ if (isset($myinputs['submit'])) {
                             </select>
                         </div>
 
+
+                        <div class="text-danger"> <?php
+                            if (isset($formErrors['texte'])) {
+                                echo $formErrors['texte'];
+                            } else if (isset($formErrors['textelength'])) {
+                                echo $formErrors['textelength'];
+                            }
+                            ?> </div>
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
-
-                            <div class="text-danger"> <?php
-                                if (isset($formErrors['texte'])) {
-                                    echo $formErrors['texte'];
-                                } else if (isset($formErrors['textelength'])) {
-                                    echo $formErrors['textelength'];
-                                }
-                                ?> </div>
-                            <br>
-
                             <label for="texte" class="form-label">Votre message</label>
                             <textarea class="form-control" id="texte" name="texte" rows="3"
-                                      placeholder="Saisir message"></textarea>
+                                      placeholder="Saisir message, 5 caractères minimum"></textarea>
                         </div>
 
                         <div class="mb-3 row mx-auto" data-aos="fade-up">
                             <input type="submit" value="Envoyer E-mail" name="submit"
                                    class="btn btn-lg btn-outline-dark mx-auto my-2">
                         </div>
+                        <div class="text-success"> <?php
+                            if (isset($messageok)) {
+                                echo $messageok;
+                            }
+                            ?> </div>
                     </form>
 
                 </div>
